@@ -1,51 +1,97 @@
 body {
-    display: flex;
     font-family: Arial, sans-serif;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #caffca;
+    background-color: white;
 }
+
 .calculator {
     background: #caffca;
     padding: 20px;
     border-radius: 15px;
-    border: 2px dashed red;
+    border: 2px dashed brown;
     text-align: center;
-    width: 350px;
+    width: 400px;
 }
-input, select, button {
-    width: calc(100% - 20px);
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.input-group input, .input-group select {
+    flex: 1;
     padding: 10px;
-    margin: 5px 0;
-    border: 2px dashed red;
+    border: 2px dashed brown;
     border-radius: 10px;
     font-size: 18px;
     text-align: center;
     background: transparent;
     color: brown;
+    outline: none;
 }
-button {
+
+.input-group select {
+    width: 60px; 
     cursor: pointer;
 }
+
+input, select {
+    flex: 1;
+    padding: 10px;
+    border: 2px dashed brown;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    background: transparent;
+    color: brown;
+    outline: none;
+}
+
+select {
+    width: 60px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px dashed brown;
+    border-radius: 10px;
+    font-size: 18px;
+    background: transparent;
+    color: brown;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(165, 42, 42, 0.2);
+}
+
 .history {
     font-size: 16px;
     color: brown;
     text-align: left;
-    max-height: 100px;
+    max-height: 120px;
     overflow-y: auto;
-    border: 2px dashed red;
+    border: 2px dashed brown;
     border-radius: 10px;
     padding: 10px;
     background: transparent;
+    margin-top: 10px;
 }
+
 .history p {
     margin: 5px 0;
 }
+
 .history p:last-child {
     font-weight: bold;
     color: red;
-}
-.error {
-    border: 2px solid red;
 }
