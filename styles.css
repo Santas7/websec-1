@@ -1,72 +1,60 @@
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     background-color: white;
+    margin: 0;
+    padding: 10px;
 }
 
 .calculator {
     background: #caffca;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
-    border: 2px dashed brown;
+    border: 2px dashed red;
     text-align: center;
-    width: 400px;
+    width: 450px;
+    max-width: 100%;
+    margin: 20px;
 }
 
 .input-group {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    justify-content: space-between;
+    gap: 2px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .input-group input, .input-group select {
-    flex: 1;
     padding: 10px;
-    border: 2px dashed brown;
+    border: 2px dashed red;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     background: transparent;
-    color: brown;
+    color: red;
     outline: none;
+}
+
+.input-group input {
+    width: 170px;
 }
 
 .input-group select {
-    width: 60px; 
-    cursor: pointer;
-}
 
-input, select {
-    flex: 1;
-    padding: 10px;
-    border: 2px dashed brown;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
-    background: transparent;
-    color: brown;
-    outline: none;
-}
-
-select {
-    width: 60px;
     cursor: pointer;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 2px dashed brown;
+    width: 220px;
+    padding: 12px;
+    margin-top: 20px;
+    border: 2px dashed red;
     border-radius: 10px;
     font-size: 18px;
     background: transparent;
-    color: brown;
+    color: red;
     cursor: pointer;
 }
 
@@ -75,23 +63,89 @@ button:hover {
 }
 
 .history {
-    font-size: 16px;
-    color: brown;
+    font-size: 18px;
+    color: red;
     text-align: left;
-    max-height: 120px;
-    overflow-y: auto;
-    border: 2px dashed brown;
+    border: 2px dashed red;
     border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
     background: transparent;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .history p {
-    margin: 5px 0;
+    margin: 7px 0;
+    opacity: 0.5;
 }
 
 .history p:last-child {
     font-weight: bold;
     color: red;
+    opacity: 1;
+}
+
+/* Адаптивность */
+
+/* Мелкие экраны (до 480px) */
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .input-group input, .input-group select {
+        font-size: 16px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .history {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Планшеты (до 768px) */
+@media (max-width: 768px) {
+    .calculator {
+        width: 90%;
+    }
+
+    .input-group {
+        gap: 8px;
+    }
+
+    .input-group input {
+        width: 140px;
+    }
+
+    button {
+        width: 180px;
+    }
+}
+
+/* Ноутбуки (до 1024px) */
+@media (max-width: 1024px) {
+    .calculator {
+        width: 400px;
+    }
+
+    .input-group input {
+        width: 150px;
+    }
+
+    button {
+        width: 200px;
+    }
 }
