@@ -10,7 +10,7 @@ body {
     background: #caffca;
     padding: 25px;
     border-radius: 15px;
-    border: 2px dashed red;
+    border: 1px dashed red;
     text-align: center;
     width: 450px;
     max-width: 100%;
@@ -27,11 +27,11 @@ body {
 }
 
 .input-group input, .input-group select {
-    padding: 10px;
-    border: 2px dashed red;
+    padding: 5px;
+    border: 1px dashed red;
     border-radius: 10px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     background: transparent;
     color: red;
     outline: none;
@@ -42,15 +42,15 @@ body {
 }
 
 .input-group select {
-
     cursor: pointer;
+    padding-right: 20px;
 }
 
 button {
     width: 220px;
-    padding: 12px;
+    padding: 6px;
     margin-top: 20px;
-    border: 2px dashed red;
+    border: 1px dashed red;
     border-radius: 10px;
     font-size: 18px;
     background: transparent;
@@ -66,7 +66,7 @@ button:hover {
     font-size: 18px;
     color: red;
     text-align: left;
-    border: 2px dashed red;
+    border: 1px dashed red;
     border-radius: 10px;
     padding: 12px;
     background: transparent;
@@ -83,7 +83,42 @@ button:hover {
     color: red;
     opacity: 1;
 }
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
+.input-group input, .input-group select {
+    padding: 5px;
+    border: 1px dashed red;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: left;
+    background: transparent;
+    color: red;
+    outline: none;
+}
+
+.input-group input {
+    width: 170px;
+}
+
+button {
+    padding: 5px 15px;
+    border: 1px dashed red;
+    border-radius: 10px;
+    background: transparent;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.result {
+    font-size: 20px;
+    color: red;
+}
 /* Адаптивность */
 
 /* Мелкие экраны (до 480px) */
@@ -91,6 +126,7 @@ button:hover {
     .calculator {
         padding: 15px;
         width: 100%;
+
     }
 
     .input-group {
@@ -138,7 +174,7 @@ button:hover {
 /* Ноутбуки (до 1024px) */
 @media (max-width: 1024px) {
     .calculator {
-        width: 400px;
+        width: 200px;
     }
 
     .input-group input {
