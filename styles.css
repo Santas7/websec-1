@@ -17,16 +17,7 @@ body {
     margin: 20px;
 }
 
-.input-group {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2px;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.input-group input, .input-group select {
+.input-field {
     padding: 5px;
     border: 1px dashed red;
     border-radius: 10px;
@@ -35,6 +26,16 @@ body {
     background: transparent;
     color: red;
     outline: none;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .input-group input {
@@ -46,7 +47,8 @@ body {
     padding-right: 20px;
 }
 
-button {
+
+.button {
     width: 220px;
     padding: 6px;
     margin-top: 20px;
@@ -58,9 +60,10 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button:hover {
     background: rgba(165, 42, 42, 0.2);
 }
+
 
 .history {
     font-size: 18px;
@@ -80,53 +83,14 @@ button:hover {
 
 .history p:last-child {
     font-weight: bold;
-    color: red;
     opacity: 1;
 }
-.input-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.input-group input, .input-group select {
-    padding: 5px;
-    border: 1px dashed red;
-    border-radius: 10px;
-    font-size: 20px;
-    text-align: left;
-    background: transparent;
-    color: red;
-    outline: none;
-}
-
-.input-group input {
-    width: 170px;
-}
-
-button {
-    padding: 5px 15px;
-    border: 1px dashed red;
-    border-radius: 10px;
-    background: transparent;
-    color: red;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.result {
-    font-size: 20px;
-    color: red;
-}
 /* Адаптивность */
-
-/* Мелкие экраны (до 480px) */
 @media (max-width: 480px) {
     .calculator {
         padding: 15px;
         width: 100%;
-
     }
 
     .input-group {
@@ -134,13 +98,14 @@ button {
         gap: 5px;
     }
 
-    .input-group input, .input-group select {
+    .input-group input,
+    .input-group select {
         font-size: 16px;
         padding: 8px;
         width: 100%;
     }
 
-    button {
+    .button {
         width: 100%;
         padding: 10px;
         font-size: 16px;
@@ -152,26 +117,20 @@ button {
     }
 }
 
-/* Планшеты (до 768px) */
 @media (max-width: 768px) {
     .calculator {
         width: 90%;
-    }
-
-    .input-group {
-        gap: 8px;
     }
 
     .input-group input {
         width: 140px;
     }
 
-    button {
+    .button {
         width: 180px;
     }
 }
 
-/* Ноутбуки (до 1024px) */
 @media (max-width: 1024px) {
     .calculator {
         width: 200px;
@@ -181,7 +140,7 @@ button {
         width: 150px;
     }
 
-    button {
+    .button {
         width: 200px;
     }
 }
